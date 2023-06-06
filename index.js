@@ -106,3 +106,20 @@ function multiplesNum(num){
 // All words must have their first letter capitalized.
 // If the final result is going to be longer than 140 characters, it should return false.
 // If the input or result is an empty string, it should return false.
+
+function hashTagGenerator(letter){
+    //removing spaces
+    let words = letter.replace(/\s+/g,'').split('');
+    console.log(words)
+    
+    for(let i =0; i<words.length; i++){
+        words[i]=words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+    }
+    let newWords ='#' + words.join('');
+
+    if(newWords > 140 || newWords == '#'){
+        return false
+    }
+    return newWords
+
+}hashTagGenerator("enery")
