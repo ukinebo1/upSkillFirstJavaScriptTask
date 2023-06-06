@@ -77,25 +77,29 @@ function diverseNum(num){
         }
     }
     return arrayNum
-}diverseNum([1, 2, -5,])
+}//diverseNum([1, 2, -5,])
+
+
 // Write a program that prints the numbers from 1 to 100. But for multiples of 3 prints "Fizz" instead of the number and for the multiples of 5 prints "Buzz". For numbers which are multiples of both 3 and 5 prints "FizzBuzz".
 
 function multiplesNum(num){
-    for(let i=0; i<num.length; i++){
-        if(num%3==0){
+    for(let i=0; i<=num; i++){
+        if(i%3==0){
             console.log("Fizz")
         }
-        else if(num%5==0){
+        else if(i%5==0){
             console.log("Buzz")
         }
-        else if(num%3 ==0 && num%5 ==0){
+        else if(i%3 ==0 && num%5 ==0){
             console.log("FizzBuzz")
         }
         else{
-            console.log("The number does not have multiples!")
+            console.log(i)
         }
     }
-}
+}multiplesNum(100)
+
+
 // The marketing team is spending way too much time typing in hashtags. Let’s create a hashtag generator for them, our hashtag generator will meet the following criteria; 
 // It must start with a hash symbol, #.
 // Ignore all spaces in the input.
